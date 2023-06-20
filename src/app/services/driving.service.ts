@@ -8,11 +8,11 @@ export class DrivingService {
 
   constructor(private http: HttpClient) { }
 
-  private saveDrivingDateUrl = 'http://localhost:8080/newReservation';
-  private reserveDayTimeUrl = 'http://localhost:8080/reserveDayTime';
-  private reservationForInstrucorUrl = 'http://localhost:8080/requestForInstructor';
-  private reservationAccptedUrl = 'http://localhost:8080/reservationAccepted';
-  private acceptedForInstructorUrl = 'http://localhost:8080/acceptedForInstructor';
+  private saveDrivingDateUrl = 'https://autoskola.herokuapp.com/newReservation';
+  private reserveDayTimeUrl = 'https://autoskola.herokuapp.com/reserveDayTime';
+  private reservationForInstrucorUrl = 'https://autoskola.herokuapp.com/requestForInstructor';
+  private reservationAccptedUrl = 'https://autoskola.herokuapp.com/reservationAccepted';
+  private acceptedForInstructorUrl = 'https://autoskola.herokuapp.com/acceptedForInstructor';
 
   reserveDrivingDate(drivingDate: any, id_organization: number) {
     return this.http.post(this.saveDrivingDateUrl, {"reservationDate": drivingDate, "autoskolaOrganization": {"id_organization": id_organization}});

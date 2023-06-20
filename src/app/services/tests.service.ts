@@ -8,12 +8,12 @@ export class TestsService {
 
   constructor(private http: HttpClient) { }
 
-  private saveTestNameUrl = 'http://localhost:8080/saveTestName';
-  private saveTestImageUrl = 'http://localhost:8080/saveTestImage';
-  private saveTestQuestionsUrl = 'http://localhost:8080/saveQuestion';
-  private saveAnswerUrl = 'http://localhost:8080/saveAnswer';
-  private getAllTestsUrl = 'http://localhost:8080/getAllTests';
-  private getAllQuestionsInTestUrl = 'http://localhost:8080/getAllQuestionsInTest';
+  private saveTestNameUrl = 'https://autoskola.herokuapp.com/saveTestName';
+  private saveTestImageUrl = 'https://autoskola.herokuapp.com/saveTestImage';
+  private saveTestQuestionsUrl = 'https://autoskola.herokuapp.com/saveQuestion';
+  private saveAnswerUrl = 'https://autoskola.herokuapp.com/saveAnswer';
+  private getAllTestsUrl = 'https://autoskola.herokuapp.com/getAllTests';
+  private getAllQuestionsInTestUrl = 'https://autoskola.herokuapp.com/getAllQuestionsInTest';
 
   saveTestName(testName: string) {
     return this.http.post(this.saveTestNameUrl, {"nameOfTest": testName});

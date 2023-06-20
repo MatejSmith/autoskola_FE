@@ -8,10 +8,10 @@ export class ChatService {
 
   constructor(private http: HttpClient) { }
 
-  private whoIamURL = 'http://localhost:8080/whoIam';
-  private getChatContactsAcceptedURL = 'http://localhost:8080/getChatContactsAccepted';
-  private sendMessageURL = 'http://localhost:8080/chat';
-  private chatGetURL = 'http://localhost:8080/chatGet';
+  private whoIamURL = 'https://autoskola.herokuapp.com/whoIam';
+  private getChatContactsAcceptedURL = 'https://autoskola.herokuapp.com/getChatContactsAccepted';
+  private sendMessageURL = 'https://autoskola.herokuapp.com/chat';
+  private chatGetURL = 'https://autoskola.herokuapp.com/chatGet';
 
   whoIam() {
     return this.http.get(this.whoIamURL);

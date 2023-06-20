@@ -10,12 +10,12 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  private instructorRegisterUrl = 'http://localhost:8080/api/instructorRegister';
-  private studentRegisterUrl = 'http://localhost:8080/api/studentRegister';
-  private adminRegisterUrl = 'http://localhost:8080/api/adminRegister';
-  private loginUrl = 'http://localhost:8080/api/login';
-  private getAuthorityUrl = 'http://localhost:8080/api/returnAuthority';
-  private sendConfirmationTokenUrl = 'http://localhost:8080/confirm-account';
+  private instructorRegisterUrl = 'https://autoskola.herokuapp.com/api/instructorRegister';
+  private studentRegisterUrl = 'https://autoskola.herokuapp.com/api/studentRegister';
+  private adminRegisterUrl = 'https://autoskola.herokuapp.com/api/adminRegister';
+  private loginUrl = 'https://autoskola.herokuapp.com/api/login';
+  private getAuthorityUrl = 'https://autoskola.herokuapp.com/api/returnAuthority';
+  private sendConfirmationTokenUrl = 'https://autoskola.herokuapp.com/confirm-account';
 
   registerInstructor(user: User) {
     return this.http.post<User>(this.instructorRegisterUrl, user);

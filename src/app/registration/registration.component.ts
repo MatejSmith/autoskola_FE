@@ -23,7 +23,7 @@ export class RegistrationComponent implements OnInit {
   onSubmit() {
     if (this.user.authority === 'ADMIN') {
     this.messageTrue = true;
-    this.http.post('http://localhost:8080/register', this.user).subscribe(
+    this.http.post('https://autoskola.herokuapp.com/register', this.user).subscribe(
       (data: any) => {
         if (data.status === 'error')
         alert(data.message);
@@ -36,7 +36,7 @@ export class RegistrationComponent implements OnInit {
   {
     this.messageTrue = true;
     this.user.confirmPassword = 'INSTRUCTOR'
-    this.http.post('http://localhost:8080/register', this.user).subscribe(
+    this.http.post('https://autoskola.herokuapp.com/register', this.user).subscribe(
       (data: any) => {
         if (data.status === 'error')
         alert(data.message);
@@ -51,7 +51,7 @@ export class RegistrationComponent implements OnInit {
   else{
     this.messageTrue = true;
     this.user.confirmPassword = 'STUDENT'
-    this.http.post('http://localhost:8080/register', this.user).subscribe(
+    this.http.post('https://autoskola.herokuapp.com/register', this.user).subscribe(
       (data: any) => {
         if (data.status === 'error')
         alert(data.message);
