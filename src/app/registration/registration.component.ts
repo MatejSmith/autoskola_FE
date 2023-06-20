@@ -43,7 +43,7 @@ export class RegistrationComponent implements OnInit {
         else{
           alert(data.message);
           // route to login
-          window.location.href = 'http://localhost:4200/login';
+          window.location.href = 'https://autoskola-fe-mda8.vercel.app/login';
         }
       },
     );
@@ -58,7 +58,7 @@ export class RegistrationComponent implements OnInit {
         else{
           alert(data.message);
           // route to login
-          window.location.href = 'http://localhost:4200/login';
+          window.location.href = 'https://autoskola-fe-mda8.vercel.app/login';
         }
       },
     );
